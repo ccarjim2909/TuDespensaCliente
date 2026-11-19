@@ -1,0 +1,12 @@
+# Dependencias de Node (pesadas y regenerables con npm install)
+node_modules/
+
+# Archivos de sistema operativo y editores
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Logs y caché temporal
+*.log
+npm-debug.log*
+.eslintcache
