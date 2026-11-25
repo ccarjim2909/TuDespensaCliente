@@ -354,3 +354,209 @@ h3 {
   display: flex;
   justify-content: space-around;
 }
+
+
+/* ==========================================================================
+   6. FORMULARIOS EXTENDIDOS, VALIDACIÓN Y LISTADOS (HITO 2)
+   ========================================================================== */
+:root {
+  --color-estado-error: #A42C28;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-estado-error: #F0A29E;
+  }
+}
+
+.autenticacion {
+  max-width: 560px;
+  margin-inline: auto;
+  margin-bottom: 40px;
+}
+
+.autenticacion__cabecera {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.autenticacion__cabecera h1 {
+  margin-bottom: 0;
+}
+
+.autenticacion__volver {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radio-boton);
+  border: 1px solid var(--color-borde-campo);
+  font-weight: 700;
+}
+
+.pestanas {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--color-borde-campo);
+  padding-bottom: 12px;
+}
+
+.pestanas__enlace {
+  padding: 6px 12px;
+  border-radius: var(--radio-boton);
+  font-weight: 500;
+}
+
+.pestanas__enlace--activo {
+  background-color: var(--color-primario-tinte-hover);
+  color: var(--color-primario);
+}
+
+.formulario-auth {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.campo__etiqueta {
+  font-weight: 500;
+}
+
+.campo__area {
+  height: auto;
+  min-height: 100px;
+  padding-block: 10px;
+  resize: vertical;
+}
+
+.campo__entrada[aria-invalid="true"] {
+  border-color: var(--color-estado-error);
+  border-width: 2px;
+}
+
+.campo__error {
+  color: var(--color-estado-error);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  min-height: 1.2em;
+}
+
+.campo__contador {
+  font-size: 0.75rem;
+  opacity: 0.85;
+  text-align: right;
+}
+
+.campo--casilla {
+  gap: 4px;
+}
+
+.campo__etiqueta-casilla {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.campo__casilla {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--color-primario);
+}
+
+.formulario-auth__acciones {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.seccion-listado {
+  margin-top: 32px;
+}
+
+.seccion-listado__cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 16px;
+}
+
+.tarjeta-registro {
+  background-color: var(--color-tarjeta);
+  border: 1px solid var(--color-borde-campo);
+  border-radius: var(--radio-tarjeta);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.tarjeta-registro__titulo {
+  color: var(--color-primario);
+  font-weight: 700;
+}
+
+.tarjeta-registro__dato {
+  font-size: 0.8125rem;
+  word-break: break-word;
+}
+
+.tarjeta-registro__acciones {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.dialogo-confirmacion {
+  margin: auto;
+  border: 1px solid var(--color-borde-campo);
+  border-radius: var(--radio-tarjeta);
+  background-color: var(--color-tarjeta);
+  color: var(--color-acento);
+  padding: 24px;
+  max-width: 400px;
+  width: calc(100% - 32px);
+}
+
+.dialogo-confirmacion::backdrop {
+  background-color: rgba(0, 0, 0, 0.55);
+}
+
+.dialogo-confirmacion__contenido {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.dialogo-confirmacion__acciones {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.formulario-auth__recuperar {
+  text-align: right;
+  margin-top: -6px;
+}
+
+.formulario-auth__enlace {
+  color: var(--color-primario);
+  font-size: 0.8125rem;
+  font-weight: 500;
+}
+
+.formulario-auth__enlace:hover {
+  text-decoration: underline;
+}
